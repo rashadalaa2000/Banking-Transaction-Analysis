@@ -1,7 +1,9 @@
 # Banking Transactions Analysis Project 🏦
 
 ## Overview
-This project focuses on analyzing a large-scale banking dataset (approx. 1 million transactions) to extract business insights, evaluate system reliability, and understand customer spending behavior. The analysis was conducted on a **15% sampled dataset** sourced from the `bank_transaction.csv` file, covering August and September 2016.
+This project focuses on analyzing a large-scale banking dataset (approx. 1 million transactions) to extract business insights, evaluate system reliability, and understand customer spending behavior. The analysis was conducted on a **15% sampled dataset** sourced from the `bank_transaction.csv` file.
+
+**Dataset Source:** [Kaggle - Bank Customer Segmentation](https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation/data?select=bank_transactions.csv)
 
 ---
 
@@ -9,10 +11,8 @@ This project focuses on analyzing a large-scale banking dataset (approx. 1 milli
 ![Map of Project](Map_of_Project.png)
 *(Note: This image illustrates the data flow and the relationship between dimensions and fact tables).*
 
-
-
 ---
-    
+
 ## SQL Scripts Breakdown
 
 ### 1. `01_create_database.sql`
@@ -48,5 +48,6 @@ This project focuses on analyzing a large-scale banking dataset (approx. 1 milli
 ---
 
 ## Technical Notes
-* **Sampling Bias:** Due to the 15% sampling and data cut-off (Aug 1st), the "New Customer" segmentation is used for **relative comparison** within the sample, not as an absolute measure of new account acquisitions.
-* **Inferred Status:** Since no explicit status column exists in `bank_transaction.csv`, system reliability was measured using **zero-amount transactions** as a proxy for failed records.
+* **Data Availability:** The raw CSV file is not uploaded to this repository due to its large size. Please refer to the Kaggle link above to download the dataset.
+* **Sampling Bias:** Due to the 15% sampling and data cut-off (Aug 1st), the "New Customer" segmentation is used for **relative comparison** within the sample.
+* **Inferred Status:** Since no explicit status column exists in the original data, system reliability was measured using **zero-amount transactions** as a proxy for failed records.
