@@ -2,10 +2,6 @@
 
 ## Overview
 This project focuses on a high-capacity analysis of a massive banking dataset, processing 1 million individual transactions. The objective is to extract mission-critical business insights, stress-test system reliability under heavy loads, and decode complex customer spending behaviors. By leveraging advanced data modeling, the analysis uncovers precise patterns in transaction flow and operational performance across the entire dataset, providing a clear roadmap for system optimization and financial growth.
-# Banking Transactions Analysis Project 🏦
-
-## Overview
-This project focuses on analyzing a large-scale banking dataset (approx. 1 million transactions) to extract business insights, evaluate system reliability, and understand customer spending behavior. The analysis was conducted on a **15% sampled dataset** sourced from the `bank_transaction.csv` file.
 
 **Dataset Source:** [Kaggle - Bank Customer Segmentation](https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation/data?select=bank_transactions.csv)
 
@@ -104,4 +100,5 @@ This project focuses on analyzing a large-scale banking dataset (approx. 1 milli
 * **Data Availability:** The raw CSV file is not uploaded to this repository due to its large size. Please refer to the Kaggle link above to download the dataset.
 * **Sampling Bias:** Due to the 15% sampling and data cut-off (Aug 1st), the "New Customer" segmentation is used for **relative comparison** within the sample.
 * **Inferred Status:** Since no explicit status column exists in the original data, system reliability was measured using **zero-amount transactions** as a proxy for failed records.
+
 
