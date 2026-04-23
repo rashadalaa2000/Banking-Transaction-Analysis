@@ -47,10 +47,6 @@ This project focuses on a high-capacity analysis of a massive banking dataset, p
 
 ---
 
-**Dataset Source:** [Kaggle - Bank Customer Segmentation](https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation/data?select=bank_transactions.csv)
-
----
-
 ## Key Findings Summary
 * **Exceptional Stability:** The system maintains a **99.92% success rate**.
 * **Zero Repeat Failures:** No single customer experienced more than one failure, indicating high system integrity and reliability.
@@ -60,11 +56,11 @@ This project focuses on a high-capacity analysis of a massive banking dataset, p
 
 ---
 
-## Technical Notes
-* **Data Availability:** The raw CSV file is not uploaded to this repository due to its large size. Please refer to the Kaggle link above to download the dataset.
-* **Sampling Bias:** This analysis is conducted on a massive dataset of 1 million transactions. Due to the data cut-off starting August 1st, the "New Customer" classification is defined relative to this specific dataset. This segmentation serves as a benchmark for comparative analysis to evaluate behavior and system load during this period, rather than representing the absolute account age in the bank's master records.
-* **Inferred Status:** Since no explicit status column exists in the original data, system reliability was measured using **zero-amount transactions** as a proxy for failed records.
+## Dataset Limitations
+This dataset contains fundamental inconsistencies in customer attributes
+(DOB, Gender, Location vary across transactions for the same CustomerID),
+suggesting synthetic generation errors.
 
-
-
+Analysis is conducted at the **transaction level**.
+Customer-level insights should be interpreted with caution.
 
