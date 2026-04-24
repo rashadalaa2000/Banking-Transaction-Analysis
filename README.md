@@ -8,7 +8,7 @@ This project focuses on a high-capacity analysis of a massive banking dataset, p
 ---
 
 ## Project Map
-![Map](data_analysis/map.png)
+![Map](sql-server-data-engineering/map.png)
 *(Note: This image illustrates the data flow and the relationship between dimensions and fact tables).*
 
 ---
