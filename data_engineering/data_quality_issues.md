@@ -1,4 +1,4 @@
-## Data Quality Issues Discovered
+https://github.com/rashadalaa2000/Banking-Transaction-Analysis/blob/main/data_quality_issues.md## Data Quality Issues Discovered
 
 ### Customer Attributes Inconsistency
 During cleaning, a critical issue was identified: customer attributes 
