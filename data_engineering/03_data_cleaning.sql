@@ -36,3 +36,17 @@ SELECT
     COUNT(*) AS count_value
 FROM dim_customers
 GROUP BY customer_gender;
+
+-- Review the file "data_quality_issues"  
+SELECT 
+    *
+FROM bank_transactions
+WHERE CustomerID IN 
+(
+    SELECT 
+        CustomerID
+    FROM bank_transactions
+    GROUP BY CustomerID
+    HAVING COUNT(DISTINCT CustGender) > 1
+)
+ORDER BY CustomerID; -- This Query on The source not the schema
