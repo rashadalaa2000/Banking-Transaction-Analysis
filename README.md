@@ -1,66 +1,90 @@
-# Banking Transactions Analysis Project 🏦
+## 📊 Overview
 
-## Overview
-This project focuses on a high-capacity analysis of a massive banking dataset, processing 1 million individual transactions. The objective is to extract mission-critical business insights, stress-test system reliability under heavy loads, and decode complex customer spending behaviors. By leveraging advanced data modeling, the analysis uncovers precise patterns in transaction flow and operational performance across the entire dataset, providing a clear roadmap for system optimization and financial growth.
+This project is a high-scale banking data analytics system built using SQL Server.  
+It processes over **1 million financial transactions** to extract actionable insights, evaluate system reliability, and analyze customer behavior patterns.
+
+The project is designed as an **end-to-end data pipeline**, covering:
+- Data engineering (database design, ingestion, cleaning, and data quality checks)
+- Advanced analytics (EDA, time-based analysis, fraud detection, and system reliability)
+
+The goal is to simulate a real-world banking analytics environment and identify operational and financial patterns that support business decision-making.
+
+---
 
 **Dataset Source:** [Kaggle - Bank Customer Segmentation](https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation/data?select=bank_transactions.csv)
 
 ---
 
+
+## 📁 Project Structure
+
+### 🏗️ Data Engineering Layer
+
+Responsible for building, preparing, and validating the data.
+
+- `01_create_database.sql` → Database schema creation (Fact & Dimension tables)
+- `02_insert_data.sql` → Data ingestion from raw banking dataset
+- `03_data_cleaning.sql` → Data cleaning and standardization process
+- `data_quality_issues.md` → Documented data inconsistencies and issues
+- `map.png` → Data model / architecture diagram
+
+---
+
 ## Project Map
-![Map](sql-server-data-engineering/map.png)
-*(Note: This image illustrates the data flow and the relationship between dimensions and fact tables).*
+![Map](data_engineering/map.png)
+
+
+### 📊 Data Analytics Layer
+
+Responsible for extracting insights and generating business intelligence.
+
+- `01_eda.sql` → Exploratory Data Analysis (transaction overview, distributions, KPIs)
+- `02_system_reliability.sql` → System stability, failures, and performance analysis
+- `03_time_based_analysis.sql` → Transaction trends over time (daily, hourly, monthly patterns)
+- `04_fraud_detection.sql` → Suspicious behavior detection and anomaly analysis
+- `insight.md` → Final business insights and key findings
 
 ---
 
-## SQL Scripts Breakdown
+## 🎯 Objectives
 
-### 1. `01_create_database.sql`
-* **Database schema setup.**
-* Definitions for Fact and Dimension tables (Transactions, Date, Customers, etc.).
-
-### 2. `02_insert_data.sql`
-* **Data ingestion process.**
-* Handling the 15% sampled records from the `bank_transaction.csv` file.
-
-### 3. `03_eda.sql` (Exploratory Data Analysis)
-* **Initial data discovery.**
-* Calculating total volumes, transaction counts, and general statistics.
-
-### 4. `04_date_analysis.sql`
-* **Deep dive into time-based trends** (Daily/Hourly).
-* Analyzing peak days (15th of the month) and high-value days (21st).
-* Customer segmentation (Early vs. Late captured users based on sampling window).
-
-### 5. `05_system_reliability.sql`
-* **Analyzing system stability** and failure proxies (Zero-amount transactions).
-* Identifying peak-load bottlenecks (e.g., Sept 1st stress point) and maintenance windows.
+- Design a scalable banking database structure
+- Process and clean large-scale transactional data (1M+ records)
+- Perform exploratory and advanced SQL analytics
+- Analyze system reliability under heavy transaction loads
+- Detect potential fraud patterns and anomalies
+- Identify time-based financial trends and customer behavior patterns
 
 ---
 
-## Key Findings Summary
-* **Exceptional Stability:** The system maintains a **99.92% success rate**.
-* **Zero Repeat Failures:** No single customer experienced more than one failure, indicating high system integrity and reliability.
-* **Peak Liquidity:** The **15th of the month** is the highest volume day (73.5M INR), driven by mid-month payroll cycles.
-* **High-Value Segments:** Transactions on the **21st of the month** have the highest average transaction value, despite lower volume.
-* **Stress Point Identified:** A micro-outage was detected on **Sept 1st at 11:00 AM**, correlating with peak monthly traffic.
+## 🛠️ Tools & Technologies
+
+- SQL Server
+- Data Warehousing Concepts (Fact & Dimension Modeling)
+- Data Cleaning & Transformation Techniques
+- Analytical SQL (Aggregations, Window Functions, Time-Series Analysis)
+- Business Intelligence Thinking
 
 ---
 
-## Key Findings Summary
-* **Exceptional Stability:** The system maintains a **99.92% success rate**.
-* **Zero Repeat Failures:** No single customer experienced more than one failure, indicating high system integrity and reliability.
-* **Peak Liquidity:** The **15th of the month** is the highest volume day (73.5M INR), driven by mid-month payroll cycles.
-* **High-Value Segments:** Transactions on the **21st of the month** have the highest average transaction value, despite lower volume.
-* **Stress Point Identified:** A micro-outage was detected on **Sept 1st at 11:00 AM**, correlating with peak monthly traffic.
+## 📌 Key Insights
+
+- 🟢 **System Stability:** 99.92% transaction success rate indicates strong reliability
+- 🔁 **Failure Behavior:** No repeated customer failures detected, suggesting stable processing logic
+- 💰 **Peak Liquidity Day:** 15th of the month shows highest transaction volume (salary-driven cycle)
+- 📈 **High-Value Transactions:** 21st of the month shows highest average transaction value
+- ⚠️ **System Stress Event:** A micro-outage detected on Sept 1st during peak traffic hours (11:00 AM)
 
 ---
 
-## Dataset Limitations
-This dataset contains fundamental inconsistencies in customer attributes
-(DOB, Gender, Location vary across transactions for the same CustomerID),
-suggesting synthetic generation errors.
+## ⚠️ Dataset Limitations
 
-Analysis is conducted at the **transaction level**.
-Customer-level insights should be interpreted with caution.
+- Customer attributes (DOB, Gender, Location) show inconsistencies across transactions
+- Likely synthetic data generation artifacts
+- Analysis is primarily transaction-level; customer-level insights should be interpreted with caution
 
+---
+
+## 👤 Author
+
+Rashad – Finance & Investment Student | Data Analytics & BI Enthusiast
